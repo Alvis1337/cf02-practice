@@ -1,6 +1,6 @@
 export const Questions = [
     {
-        "exam": "Practice Exam 2",
+        "name": "Practice Exam 1",
         "questions": [
             {
                 "question": "A global company with a large number of AWS accounts is seeking a way in which they can centrally manage billing and security policies across all accounts. Which AWS Service will assist them in meeting these goals?",
@@ -156,6 +156,295 @@ export const Questions = [
                 "question": "Under the AWS Shared responsibility model, which of the following are the responsibility of the customer? (Choose TWO)",
                 "answers": ["A. Protecting the global infrastructure", "B. Managing the network infrastructure", "C. Configuring network access control lists (ACLs)", "D. Patching the underlying hypervisor", "E. Setting up server-side encryption"],
                 "solution": "C, E"
+            }
+        ]
+    },
+    {
+        "name": "Practice Exam 2",
+        "questions": [
+            {
+                "question": "An administrator needs to rapidly deploy a popular IT solution and start using it immediately. Where can the administrator find assistance?",
+                "answers": [
+                    "A. AWS Well-Architected Framework documentation.",
+                    "B. Amazon CloudFront.",
+                    "C. AWS CodeCommit.",
+                    "D. AWS Quick Start reference deployments."
+                ],
+                "solution": "D"
+            },
+            {
+                "question": "What is one of the advantages of the Amazon Relational Database Service (Amazon RDS)?",
+                "answers": [
+                    "A. It simplifies relational database administration tasks.",
+                    "B. It provides 99.99999999999% reliability and durability.",
+                    "C. It automatically scales databases for loads.",
+                    "D. It enables users to dynamically adjust CPU and RAM resources."
+                ],
+                "solution": "A"
+            },
+            {
+                "question": "Which of the following AWS Cloud services can be used to run a customer-managed relational database?",
+                "answers": [
+                    "A. Amazon EC2.",
+                    "B. Amazon Route 53.",
+                    "C. Amazon ElastiCache.",
+                    "D. Amazon DynamoDB."
+                ],
+                "solution": "A"
+            },
+            {
+                "question": "A user is planning to launch two additional Amazon EC2 instances to increase availability. Which action should the user take?",
+                "answers": [
+                    "A. Launch the instances across multiple Availability Zones in a single AWS Region.",
+                    "B. Launch the instances as EC2 Reserved Instances in the same AWS Region and the same Availability Zone.",
+                    "C. Launch the instances in multiple AWS Regions but in the same Availability Zone.",
+                    "D. Launch the instances as EC2 Spot Instances in the same AWS Region but in different Availability Zones."
+                ],
+                "solution": "A"
+            },
+            {
+                "question": "Which of the following can limit Amazon Simple Storage Service (Amazon S3) bucket access to specific users?",
+                "answers": [
+                    "A. A public and private key-pair.",
+                    "B. Amazon Inspector.",
+                    "C. AWS Identity and Access Management (IAM) policies.",
+                    "D. Security Groups."
+                ],
+                "solution": "C"
+            },
+            {
+                "question": "Which AWS service allows companies to connect an Amazon VPC to an on-premises data center? (Select TWO)",
+                "answers": [
+                    "A. AWS VPN.",
+                    "B. Amazon Redshift.",
+                    "C. API Gateway.",
+                    "D. Amazon Direct Connect."
+                ],
+                "solution": "A, D"
+            },
+            {
+                "question": "Which AWS service or feature can be used to monitor CPU usage?",
+                "answers": [
+                    "A. AWS CloudTrail.",
+                    "B. VPC Flow Logs.",
+                    "C. Amazon CloudWatch.",
+                    "D. AWS Config."
+                ],
+                "solution": "C"
+            },
+            {
+                "question": "Which task is AWS responsible for in the shared responsibility model for security and compliance?",
+                "answers": [
+                    "A. Granting access to individuals and services.",
+                    "B. Encrypting data in transit.",
+                    "C. Updating Amazon EC2 host firmware.",
+                    "D. Updating operating systems."
+                ],
+                "solution": "C"
+            },
+            {
+                "question": "Which of the following security-related actions are available at no cost?",
+                "answers": [
+                    "A. Calling AWS Support.",
+                    "B. Contacting AWS Professional Services to request a workshop.",
+                    "C. Accessing forums, blogs, and whitepapers.",
+                    "D. Attending AWS classes at a local university."
+                ],
+                "solution": "C"
+            },
+            {
+                "question": "Which storage service can be used as a low-cost option for hosting static websites?",
+                "answers": [
+                    "A. Amazon Glacier.",
+                    "B. Amazon DynamoDB.",
+                    "C. Amazon Elastic File System (Amazon EFS).",
+                    "D. Amazon Simple Storage Service (Amazon S3)."
+                ],
+                "solution": "D"
+            },
+            {
+                "question": "According to the AWS shared responsibility model what is the sole responsibility of AWS?",
+                "answers": [
+                    "A. Application security.",
+                    "B. Edge location management.",
+                    "C. Patch management.",
+                    "D. Client-side data."
+                ],
+                "solution": "B"
+            },
+            {
+                "question": "Which of the following are pillars of the AWS Well-Architected Framework? (Select TWO)",
+                "answers": [
+                    "A. Multiple Availability Zones.",
+                    "B. Performance efficiency.",
+                    "C. Security.",
+                    "D. Encryption usage.",
+                    "E. High availability."
+                ],
+                "solution": "B, C"
+            },
+            {
+                "question": "Which AWS service identifies security groups that allow unrestricted access to a user’s AWS resources?",
+                "answers": [
+                    "A. AWS Trusted Advisor.",
+                    "B. Amazon Inspector.",
+                    "C. Amazon CloudWatch.",
+                    "D. AWS CloudTrail."
+                ],
+                "solution": "A"
+            },
+            {
+                "question": "Which design principles for cloud architecture are recommended when re-architecting a large monolithic application? (Select TWO)",
+                "answers": [
+                    "A. Use manual monitoring.",
+                    "B. Use fixed servers.",
+                    "C. Implement loose coupling.",
+                    "D. Rely on individual components.",
+                    "E. Design for scalability."
+                ],
+                "solution": "C, E"
+            },
+            {
+                "question": "When architecting cloud applications, which of the following are a key design principle?",
+                "answers": [
+                    "A. Use the largest instance possible.",
+                    "B. Provision capacity for peak load.",
+                    "C. Use the Scrum development process.",
+                    "D. Implement elasticity."
+                ],
+                "solution": "D"
+            },
+            {
+                "question": "A company has deployed several relational databases on Amazon EC2 instances. Every month the database software vendor releases new security patches that need to be applied to the databases. What is the MOST efficient way to apply the security patches?",
+                "answers": [
+                    "A. Connect to each database instance on a monthly basis and download and apply the necessary security patches from the vendor.",
+                    "B. Enable automate patching for the instances using the Amazon RDS console.",
+                    "C. In AWS Config. configure a rule for the instances and the required patch level.",
+                    "D. Use AWS Systems Manager to automate database patching according to a schedule."
+                ],
+                "solution": "D"
+            },
+            {
+                "question": "Which mechanism allows developers to access AWS services from application code?",
+                "answers": [
+                    "A. AWS Software Development Kit.",
+                    "B. AWS Management Console.",
+                    "C. AWS CodePipeline.",
+                    "D. AWS Config."
+                ],
+                "solution": "A"
+            },
+            {
+                "question": "Which AWS feature will reduce the customer’s total cost of ownership (TCO)?",
+                "answers": [
+                    "A. Shared responsibility security model.",
+                    "B. Single tenancy.",
+                    "C. Elastic computing.",
+                    "D. Encryption."
+                ],
+                "solution": "C"
+            },
+            {
+                "question": "Which of the following is a benefit of using the AWS Cloud?",
+                "answers": [
+                    "A. Permissive security removes the administrative burden.",
+                    "B. Ability to focus on revenue-generating activities.",
+                    "C. Control over cloud network hardware.",
+                    "D. Choice of specific cloud hardware vendors."
+                ],
+                "solution": "B"
+            },
+            {
+                "question": "Which of the following are categories of AWS Trusted Advisor? (Select TWO)",
+                "answers": [
+                    "A. Fault Tolerance.",
+                    "B. Instance Usage.",
+                    "C. Infrastructure.",
+                    "D. Performance.",
+                    "E. Storage Capacity."
+                ],
+                "solution": "A, D"
+            },
+            {
+                "question": "What is Amazon CloudWatch?",
+                "answers": [
+                    "A. A code repository with customizable build and team commit features.",
+                    "B. A metrics repository with customizable notification thresholds and channels.",
+                    "C. A security configuration repository with threat analytics.",
+                    "D. A rule repository of a web application firewall with automated vulnerability prevention features."
+                ],
+                "solution": "B"
+            },
+            {
+                "question": "Under the AWS shared responsibility model, which of the following activities are the customer’s responsibility? (Select TWO)",
+                "answers": [
+                    "A. Patching operating system components for Amazon Relational Database Server (Amazon RDS).",
+                    "B. Encrypting data on the client-side.",
+                    "C. Training the data center staff.",
+                    "D. Configuring Network Access Control Lists (ACL).",
+                    "E. Maintaining environmental controls within a data center."
+                ],
+                "solution": "B, D"
+            },
+            {
+                "question": "Under the shared responsibility model, which of the following is a shared control between a customer and AWS?",
+                "answers": [
+                    "A. Physical controls.",
+                    "B. Patch management.",
+                    "C. Zone security.",
+                    "D. Data center auditing."
+                ],
+                "solution": "B"
+            },
+            {
+                "question": "Which of the following is a benefit of loose coupling as it relates to software architecture?",
+                "answers": [
+                    "A. It enables applications to have tightly integrated dependencies.",
+                    "B. It allows companies to focus on their physical data center operations.",
+                    "C. It facilitates quicker updates and implementation of new features.",
+                    "D. It allows applications to implement relational database schemas."
+                ],
+                "solution": "C"
+            },
+            {
+                "question": "Which of the following can be used to identity a specific user who terminated an Amazon EC2 instance?",
+                "answers": [
+                    "A. Amazon Inspector.",
+                    "B. AWS Trusted Advisor.",
+                    "C. AWS CloudTrail.",
+                    "D. AWS Config."
+                ],
+                "solution": "C"
+            },
+            {
+                "question": "Which of the following tasks is the responsibility of AWS?",
+                "answers": [
+                    "A. Encrypting client-side data.",
+                    "B. Configuring security settings on the Amazon EC2 instances.",
+                    "C. Patching the network infrastructure.",
+                    "D. Setting user password policies."
+                ],
+                "solution": "C"
+            },
+            {
+                "question": "Which AWS services can be used to improve network security? (Select TWO)",
+                "answers": [
+                    "A. AWS Trusted Advisor.",
+                    "B. Amazon CloudFront.",
+                    "C. AWS Direct Connect.",
+                    "D. AWS WAF."
+                ],
+                "solution": "B, D"
+            },
+            {
+                "question": "A company wants to be notified via email of any changes to the security group of a particular Amazon EC2 instance. Which AWS service can be used to achieve this?",
+                "answers": [
+                    "A. AWS Config.",
+                    "B. AWS Service Catalog.",
+                    "C. AWS Trusted Advisor.",
+                    "D. Amazon Inspector."
+                ],
+                "solution": "A"
             }
         ]
     }

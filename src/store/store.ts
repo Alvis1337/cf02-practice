@@ -1,7 +1,8 @@
 import {configureStore, ThunkAction, Action, combineReducers} from '@reduxjs/toolkit';
 import { persistReducer, persistStore } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-import {authSlice} from "./slices/auth/authSlice.tsx";
+import questionReducer from "./reducers/questionReducer.ts";
+import examReducer from "./reducers/examReducer.ts";
 
 const persistConfig = {
     key: 'root',
@@ -9,7 +10,8 @@ const persistConfig = {
 }
 
 const rootReducer = combineReducers({
-    authState: authSlice.reducer,
+    question: questionReducer,
+    exam: examReducer
 })
 
 const persistedReducer = persistReducer(
