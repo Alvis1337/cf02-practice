@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Button, Card, CardContent, FormControlLabel, Radio, RadioGroup, Typography } from '@mui/material';
+import { Button, Card, CardContent, FormControlLabel, Checkbox, FormGroup, Typography } from '@mui/material';
+import { toast } from 'react-toastify';
 
 interface QuestionProps {
     question: string;
@@ -9,15 +10,24 @@ interface QuestionProps {
 }
 
 const QuestionCard: React.FC<QuestionProps> = ({ question, answers, solution, onAnswer }) => {
-    const [selectedAnswer, setSelectedAnswer] = useState('');
+    const [selectedAnswers, setSelectedAnswers] = useState<string[]>([]);
+
+    const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const value = event.target.value;
+        setSelectedAnswers(prev =>
+            prev.includes(value) ? prev.filter(answer => answer !== value) : [...prev, value]
+        );
+    };
 
     const handleSubmit = () => {
-        if (selectedAnswer[0] === solution) {
-            alert('Correct!');
-            onAnswer(true);
+        const solutionArray = solution.split(',').map(s => s.trim());
+        const isCorrect = JSON.stringify(selectedAnswers.sort()) === JSON.stringify(solutionArray.sort());
+        onAnswer(isCorrect);
+        setSelectedAnswers([]);
+        if (isCorrect) {
+            toast.success('Correct!');
         } else {
-            alert(`Your answer ${selectedAnswer} is incorrect, the correct answer is ${solution}`);
-            onAnswer(false);
+            toast.error(`Incorrect! The correct answer was ${solution}`);
         }
     };
 
@@ -27,16 +37,21 @@ const QuestionCard: React.FC<QuestionProps> = ({ question, answers, solution, on
                 <Typography variant="h5" component="div">
                     {question}
                 </Typography>
-                <RadioGroup
-                    aria-label="quiz"
-                    name="quiz"
-                    value={selectedAnswer}
-                    onChange={(e) => setSelectedAnswer(e.target.value)}
-                >
+                <FormGroup>
                     {answers.map((answer: string, index: number) => (
-                        <FormControlLabel key={index} value={answer} control={<Radio />} label={answer} />
+                        <FormControlLabel
+                            key={index}
+                            control={
+                                <Checkbox
+                                    checked={selectedAnswers.includes(String.fromCharCode(65 + index))}
+                                    onChange={handleCheckboxChange}
+                                    value={String.fromCharCode(65 + index)}
+                                />
+                            }
+                            label={answer}
+                        />
                     ))}
-                </RadioGroup>
+                </FormGroup>
                 <Button variant="contained" onClick={handleSubmit}>
                     Submit
                 </Button>
