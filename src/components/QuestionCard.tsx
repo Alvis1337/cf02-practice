@@ -1,7 +1,14 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Button, Card, CardContent, FormControlLabel, Radio, RadioGroup, Typography } from '@mui/material';
 
-const QuestionCard = ({ question, answers, solution, onAnswer }) => {
+interface QuestionProps {
+    question: string;
+    answers: string[];
+    solution: string;
+    onAnswer: (isCorrect: boolean) => void;
+}
+
+const QuestionCard: React.FC<QuestionProps> = ({ question, answers, solution, onAnswer }) => {
     const [selectedAnswer, setSelectedAnswer] = useState('');
 
     const handleSubmit = () => {
@@ -26,7 +33,7 @@ const QuestionCard = ({ question, answers, solution, onAnswer }) => {
                     value={selectedAnswer}
                     onChange={(e) => setSelectedAnswer(e.target.value)}
                 >
-                    {answers.map((answer, index) => (
+                    {answers.map((answer: string, index: number) => (
                         <FormControlLabel key={index} value={answer} control={<Radio />} label={answer} />
                     ))}
                 </RadioGroup>

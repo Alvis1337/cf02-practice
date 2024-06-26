@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Grid, Typography, Button, useTheme } from '@mui/material';
 import { Questions } from '../assets/questions.tsx';
 import QuestionCard from '../components/QuestionCard.tsx';
@@ -17,7 +17,7 @@ const Home = () => {
         }
     }, [currentQuestionIndex]);
 
-    const handleAnswer = (isCorrect) => {
+    const handleAnswer = (isCorrect: boolean) => {
         if (isCorrect) {
             setScore(score + 1);
         }
@@ -27,7 +27,6 @@ const Home = () => {
             setIsTestFinished(true);
         }
     };
-
     const resetTest = () => {
         setScore(0);
         setCurrentQuestionIndex(0);
