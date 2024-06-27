@@ -13,8 +13,10 @@ const Home = () => {
     const [score, setScore] = useState(0);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [isTestFinished, setIsTestFinished] = useState(false);
+    const dispatch = useDispatch();
 
     useEffect(() => {
+        setSelectedExam(Questions[1].name)
         dispatch(selectExam(selectedExam));
     }, []);
 
@@ -24,7 +26,6 @@ const Home = () => {
 
     const theme = useTheme();
 
-    const dispatch = useDispatch();
 
     const resetTest = () => {
         dispatch(resetAnswers());
@@ -63,11 +64,11 @@ const Home = () => {
     return (
         <Grid container spacing={2} sx={{p: 2}} justifyContent={'center'}>
             <Grid item xs={12} md={4}>
-                <Typography variant={theme.breakpoints.down('sm') ? "body1" : "h6"}>Score: {score}</Typography>
+                <Typography variant={theme.breakpoints.down('sm') ? "body1" : "h6"} textAlign={'center'}>Score: {score}</Typography>
             </Grid>
             <Grid item xs={12} md={4}>
                 <Typography
-                    variant={theme.breakpoints.down('sm') ? "body1" : "h6"}>Question: {currentQuestionIndex + 1}/{questions.length}</Typography>
+                    variant={theme.breakpoints.down('sm') ? "body1" : "h6"} textAlign={'center'}>Question: {currentQuestionIndex + 1}/{questions.length}</Typography>
             </Grid>
             <Grid item xs={12} md={4}>
                 <Select value={selectedExam} onChange={handleExamChange}>
