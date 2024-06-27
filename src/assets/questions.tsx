@@ -486,7 +486,8 @@ export const Questions = [
                     "A. Applying the principle of least privilege to all AWS resources.",
                     "B. Automatically provisioning new resources to meet demand.",
                     "C. All AWS services are considered Global Services, and this design helps customers serve their international users.",
-                    "D. Providing compensation to customers if issues occur."
+                    "D. Providing compensation to customers if issues occur.",
+                    "E. Ability to recover quickly from failures.\n"
                 ],
                 "solution": "B, E"
             },
@@ -526,7 +527,8 @@ export const Questions = [
                     "A. Built-in computing capabilities that allow customers to process data locally.",
                     "B. A catalog of third-party software solutions that customers need to build solutions and run their businesses.",
                     "C. A hybrid cloud storage between on-premises environments and the AWS Cloud.",
-                    "D. An Exabyte-scale data transfer service that allows you to move extremely large amounts of data to AWS."
+                    "D. An Exabyte-scale data transfer service that allows you to move extremely large amounts of data to AWS.",
+                    "E. Secure transfer of large amounts of data into and out of the AWS."
                 ],
                 "solution": "A, E"
             },
@@ -586,7 +588,8 @@ export const Questions = [
                     "A. Increasing speed and agility.",
                     "B. There is no need to worry about security.",
                     "C. Gaining complete control over the physical infrastructure.",
-                    "D. Operating applications on behalf of customers."
+                    "D. Operating applications on behalf of customers.",
+                    "E. All of the physical security and most of the data/network security are taken care of for you."
                 ],
                 "solution": "A, E"
             },
@@ -831,7 +834,7 @@ export const Questions = [
                 "solution": "A, D"
             },
             {
-                "question": "In order to implement best practices when dealing with a \u201cSingle Point of Failure,\u201d you should attempt to build as much automation as possible in both detecting and reacting to failure. Which of the following AWS services would help? (Choose TWO)",
+                "question": "In order to implement best practices when dealing with a Single Point of Failure, you should attempt to build as much automation as possible in both detecting and reacting to failure. Which of the following AWS services would help? (Choose TWO)",
                 "answers": [
                     "A. ELB.",
                     "B. Auto Scaling.",
@@ -886,7 +889,8 @@ export const Questions = [
                     "A. Detailed troubleshooting guidance to address AWS events impacting your resources.",
                     "B. Health checks for Auto Scaling instances.",
                     "C. Recommendations for Cost Optimization.",
-                    "D. A dashboard detailing vulnerabilities in your applications."
+                    "D. A dashboard detailing vulnerabilities in your applications.",
+                    "E. Personalized view of AWS service health."
                 ],
                 "solution": "A, E"
             },
@@ -926,7 +930,8 @@ export const Questions = [
                     "A. Disk disposal.",
                     "B. Controlling physical access to compute resources.",
                     "C. Patching the Network infrastructure.",
-                    "D. Setting password complexity rules."
+                    "D. Setting password complexity rules.",
+                    "E. Configuring network access rules."
                 ],
                 "solution": "D, E"
             },
@@ -952,7 +957,7 @@ export const Questions = [
             }
         ]
     },
-    
+
     {
         "name": "Practice Exam 4",
         "questions": [
@@ -1022,7 +1027,8 @@ export const Questions = [
                     "A. Amazon Redshift.",
                     "B. AWS Snowball.",
                     "C. Amazon Simple Storage Service.",
-                    "D. Amazon EBS."
+                    "D. Amazon EBS.",
+                    "E. Amazon DynamoDB."
                 ],
                 "solution": "C, E"
             },
@@ -1032,7 +1038,8 @@ export const Questions = [
                     "A. AWS Regions.",
                     "B. Multi-AZ Deployment.",
                     "C. Automatic patching.",
-                    "D. Read Replicas."
+                    "D. Read Replicas.",
+                    "E. Amazon DynamoDB."
                 ],
                 "solution": "B, D"
             },
@@ -1122,7 +1129,8 @@ export const Questions = [
                     "A. Patch management controls.",
                     "B. Database controls.",
                     "C. Awareness & Training.",
-                    "D. Environmental controls."
+                    "D. Environmental controls.",
+                    "E. Physical controls."
                 ],
                 "solution": "D, E"
             },
@@ -1152,7 +1160,8 @@ export const Questions = [
                     "A. AWS Batch.",
                     "B. AWS Outposts.",
                     "C. Amazon Lightsail.",
-                    "D. Amazon EC2."
+                    "D. Amazon EC2.",
+                    "E. AWS Lambda."
                 ],
                 "solution": "D, E"
             },
@@ -1192,7 +1201,8 @@ export const Questions = [
                     "A. AWS Artifact.",
                     "B. AWS Cloud9.",
                     "C. AWS Direct Connect.",
-                    "D. AWS CloudTrail."
+                    "D. AWS CloudTrail.",
+                    "E. AWS VPN."
                 ],
                 "solution": "C, E"
             },
@@ -1222,7 +1232,8 @@ export const Questions = [
                     "A. AWS CloudHSM.",
                     "B. Security Groups.",
                     "C. AWS Batch.",
-                    "D. AWS IAM."
+                    "D. AWS IAM.",
+                    "E. Network Access Control Lists (Network ACLs)."
                 ],
                 "solution": "B, E"
             },
@@ -1332,7 +1343,8 @@ export const Questions = [
                     "A. Network Access Control Lists (NACLs).",
                     "B. Key Pairs.",
                     "C. Access Keys.",
-                    "D. IAM Policies."
+                    "D. IAM Policies.",
+                    "E. Security Groups."
                 ],
                 "solution": "A, E"
             },
@@ -1717,7 +1729,8 @@ export const Questions = [
                     "A. Quickly identify resources that belong to a specific project.",
                     "B. Quickly identify software solutions on AWS.",
                     "C. Track API calls in your AWS account.",
-                    "D. Quickly identify deleted resources and their metadata."
+                    "D. Quickly identify deleted resources and their metadata.",
+                    "E. Track AWS spending across multiple resources."
                 ],
                 "solution": "A, E"
             },
@@ -1747,7 +1760,8 @@ export const Questions = [
                     "A. Protecting sensitive data.",
                     "B. Patching of the underlying infrastructure.",
                     "C. Setup and operation of managed databases.",
-                    "D. Maintaining consistent hardware components."
+                    "D. Maintaining consistent hardware components.",
+                    "E. Installing and configuring third-party software."
                 ],
                 "solution": "A, E"
             },
@@ -1757,7 +1771,8 @@ export const Questions = [
                     "A. Free commercial software licenses.",
                     "B. Free technical support.",
                     "C. Elastic resources.",
-                    "D. On-site visits for auditing."
+                    "D. On-site visits for auditing.",
+                    "E. Cost Savings."
                 ],
                 "solution": "C, E"
             },
@@ -1767,7 +1782,8 @@ export const Questions = [
                     "A. Amazon Inspector.",
                     "B. AWS Virtual Private Gateway.",
                     "C. AWS Batch.",
-                    "D. Amazon ECS."
+                    "D. Amazon ECS.",
+                    "E. AWS Config."
                 ],
                 "solution": "A, E"
             },
@@ -1837,7 +1853,8 @@ export const Questions = [
                     "A. AWS allows them to pay later when their business succeed.",
                     "B. AWS can build complete data centers faster than any other Cloud provider.",
                     "C. Using AWS, they can reduce time-to-market by focusing on business activities rather than on building and managing data centers.",
-                    "D. AWS removes the need to invest in operational expenditure."
+                    "D. AWS removes the need to invest in operational expenditure.",
+                    "E. Using AWS allows companies to replace large capital expenditure with low variable costs."
                 ],
                 "solution": "C, E"
             },
@@ -1847,7 +1864,8 @@ export const Questions = [
                     "A. Automatically scales to meet required throughput capacity.",
                     "B. Provides resizable instances to match the current demand.",
                     "C. Supports both relational and non-relational data models.",
-                    "D. Offers extremely low (single-digit millisecond) latency."
+                    "D. Offers extremely low (single-digit millisecond) latency.",
+                    "E. Supports the most popular NoSQL database engines such as CouchDB and MongoDB."
                 ],
                 "solution": "A, D"
             },
@@ -1897,7 +1915,8 @@ export const Questions = [
                     "A. Running penetration tests.",
                     "B. Reserving capacity.",
                     "C. Data center operations.",
-                    "D. Auditing and regulatory compliance."
+                    "D. Auditing and regulatory compliance.",
+                    "E. Infrastructure security."
                 ],
                 "solution": "C, E"
             },
@@ -1917,7 +1936,8 @@ export const Questions = [
                     "A. AWS CodeDeploy.",
                     "B. AWS Quick Starts.",
                     "C. AWS CloudFormation.",
-                    "D. AWS DMS."
+                    "D. AWS DMS.",
+                    "E. AWS Management Console."
                 ],
                 "solution": "C, E"
             },
@@ -2147,12 +2167,13 @@ export const Questions = [
                 "solution": "C"
             },
             {
-                "question": "Which of the following are examples of the customer's responsibility to implement \u201csecurity IN the cloud\u201d? (Choose TWO)",
+                "question": "Which of the following are examples of the customer's responsibility to implement security IN the cloud? (Choose TWO)",
                 "answers": [
                     "A. Building a schema for an application.",
                     "B. Replacing physical hardware.",
                     "C. Creating a new hypervisor.",
-                    "D. Patch management of the underlying infrastructure."
+                    "D. Patch management of the underlying infrastructure.",
+                    "E. File system encryption."
                 ],
                 "solution": "A, E"
             },
@@ -2412,7 +2433,8 @@ export const Questions = [
                     "A. Stop all running services and open an investigation.",
                     "B. Give your root account password to AWS Support so that they can assist in troubleshooting and securing the account.",
                     "C. Check the AWS CloudTrail logs and delete all IAM users that have access to your resources.",
-                    "D. Open an investigation and delete any potentially compromised IAM users."
+                    "D. Open an investigation and delete any potentially compromised IAM users.",
+                    "E. Change your AWS root account password and the passwords of any IAM users."
                 ],
                 "solution": "D, E"
             },
@@ -2452,7 +2474,8 @@ export const Questions = [
                     "A. Lambda only supports Python and Node.js, but third party plugins are available to convert code in other languages to these formats.",
                     "B. Lambda natively supports a number of programming languages such as Node.js, Python, and Java.",
                     "C. Lambda is AWS' proprietary programming language for microservices.",
-                    "D. Lambda doesn't support programming languages; it is a serverless compute service."
+                    "D. Lambda doesn't support programming languages; it is a serverless compute service.",
+                    "E. Lambda can support any programming language using an API."
                 ],
                 "solution": "B, E"
             },
@@ -2517,7 +2540,8 @@ export const Questions = [
                     "A. Eliminates the need to monitor servers and applications.",
                     "B. Manages all the compliance and auditing tasks.",
                     "C. Provides custom hardware to meet any specification.",
-                    "D. Eliminates the need to guess on infrastructure capacity needs."
+                    "D. Eliminates the need to guess on infrastructure capacity needs.",
+                    "E. Enables customers to trade their capital expenses for operational expenses."
                 ],
                 "solution": "D, E"
             },
@@ -2557,7 +2581,8 @@ export const Questions = [
                     "A. Amazon Neptune.",
                     "B. Amazon CloudSearch.",
                     "C. Microsoft SQL Server on Amazon EC2.",
-                    "D. MySQL on Amazon EC2."
+                    "D. MySQL on Amazon EC2.",
+                    "E. Amazon RDS for MySQL."
                 ],
                 "solution": "A, E"
             },
@@ -2742,7 +2767,7 @@ export const Questions = [
                 "solution": "D"
             },
             {
-                "question": "What does the term \u201cEconomies of scale\u201d mean?",
+                "question": "What does the term Economies of scale mean?",
                 "answers": [
                     "A. It means that you save more when you consume more.",
                     "B. It means as more time passes using AWS, you pay more for its services.",
@@ -2817,7 +2842,8 @@ export const Questions = [
                     "A. Amazon RDS.",
                     "B. Amazon DynamoDB.",
                     "C. AWS Lambda.",
-                    "D. AWS Fargate."
+                    "D. AWS Fargate.",
+                    "E. Amazon EMR."
                 ],
                 "solution": "A, E"
             },
@@ -3002,7 +3028,8 @@ export const Questions = [
                     "A. Using default encryption for any number of S3 buckets.",
                     "B. The number of EBS volumes attached to your instances.",
                     "C. The storage class used for the objects stored.",
-                    "D. Creating and deleting S3 buckets."
+                    "D. Creating and deleting S3 buckets.",
+                    "E. The total size in gigabytes of all objects stored."
                 ],
                 "solution": "C, E"
             },
@@ -3012,7 +3039,8 @@ export const Questions = [
                     "A. Tracks user activity and APl usage.",
                     "B. Increases application availability by caching at the edge.",
                     "C. Enables faster disaster recovery.",
-                    "D. Stores archived data at very low costs."
+                    "D. Stores archived data at very low costs.",
+                    "E. Delivers content to end users with low latency."
                 ],
                 "solution": "B, E"
             },
@@ -3042,7 +3070,8 @@ export const Questions = [
                     "A. Convertible.",
                     "B. Expedited.",
                     "C. Bulk.",
-                    "D. Spot."
+                    "D. Spot.",
+                    "E. Standard."
                 ],
                 "solution": "A, E"
             },
@@ -3182,7 +3211,8 @@ export const Questions = [
                     "A. AWS KMS.",
                     "B. AWS Certificate Manager.",
                     "C. AWS CodeDeploy.",
-                    "D. AWS CodeCommit."
+                    "D. AWS CodeCommit.",
+                    "E. CloudHSM."
                 ],
                 "solution": "A, E"
             },
@@ -3372,7 +3402,8 @@ export const Questions = [
                     "A. Control access to AWS services.",
                     "B. Help organizations design and maintain an accelerated path to successful cloud adoption.",
                     "C. Manage your organization's payment methods.",
-                    "D. Help organization achieve their desired business outcomes with AWS."
+                    "D. Help organization achieve their desired business outcomes with AWS.",
+                    "E. Consolidate billing across multiple AWS accounts."
                 ],
                 "solution": "A, E"
             },
@@ -3452,7 +3483,8 @@ export const Questions = [
                     "A. Store media assets in the region closest to your end users.",
                     "B. Store media assets on an additional EBS volume and increase the capacity of your server.",
                     "C. Replicate media assets to at least two availability zones.",
-                    "D. Reduce the size of media assets using the Amazon Elastic Transcoder."
+                    "D. Reduce the size of media assets using the Amazon Elastic Transcoder.",
+                    "E. Store media assets in S3 and use CloudFront to distribute these assets."
                 ],
                 "solution": "A, E"
             },
@@ -3557,7 +3589,8 @@ export const Questions = [
                     "A. Improves Fault-Tolerance.",
                     "B. Provides your business with a seamless remote accessibility.",
                     "C. Prevents unauthorized users from getting into your network.",
-                    "D. Provides automatic data backups."
+                    "D. Provides automatic data backups.",
+                    "E. Can be scaled manually in a shorter period of time."
                 ],
                 "solution": "A, E"
             },
@@ -3617,7 +3650,8 @@ export const Questions = [
                     "A. Storage consumed.",
                     "B. Number of requests to your functions.",
                     "C. Number of volumes.",
-                    "D. Placement groups."
+                    "D. Placement groups.",
+                    "E. Compute time consumed."
                 ],
                 "solution": "B, E"
             },
@@ -3707,7 +3741,8 @@ export const Questions = [
                     "A. Developer.",
                     "B. Premium.",
                     "C. Enterprise.",
-                    "D. Standard."
+                    "D. Standard.",
+                    "E. Business."
                 ],
                 "solution": "C, E"
             },
@@ -3807,7 +3842,8 @@ export const Questions = [
                     "A. Download all the attached policies in a safe place.",
                     "B. Delete all IAM accounts and recreate them.",
                     "C. Use the CloudWatch service to check all API calls that have been made in your account since the administrator was fired.",
-                    "D. Rotate all access keys."
+                    "D. Rotate all access keys.",
+                    "E. Change the email address and password of the root user account and enable MFA."
                 ],
                 "solution": "D, E"
             },
@@ -3827,7 +3863,8 @@ export const Questions = [
                     "A. Deploy your resources across multiple Availability Zones.",
                     "B. Use Amazon EC2 Auto Scaling.",
                     "C. Deploy your resources in another region.",
-                    "D. Use Elastic Load Balancing."
+                    "D. Use Elastic Load Balancing.",
+                    "E. Use Serverless Computing whenever possible."
                 ],
                 "solution": "B, E"
             },
@@ -3836,8 +3873,9 @@ export const Questions = [
                 "answers": [
                     "A. They provide free capacity when testing your new applications.",
                     "B. They are cheaper than all other EC2 options.",
-                    "C. They remove the need to buy \u201csafety net\u201d capacity to handle periodic traffic spikes.",
-                    "D. They only require 1-2 days for setup and configuration."
+                    "C. They remove the need to buy safety net capacity to handle periodic traffic spikes.",
+                    "D. They only require 1-2 days for setup and configuration.",
+                    "E. You can increase or decrease your compute capacity depending on the demands of your application."
                 ],
                 "solution": "C, E"
             },
@@ -4122,7 +4160,8 @@ export const Questions = [
                     "A. Use manual monitoring.",
                     "B. Use fixed servers.",
                     "C. Implement loose coupling.",
-                    "D. Rely on individual components."
+                    "D. Rely on individual components.",
+                    "E. Design for scalability."
                 ],
                 "solution": "C, E"
             },
@@ -4252,7 +4291,8 @@ export const Questions = [
                     "A. Amazon EBS.",
                     "B. Amazon Connect.",
                     "C. AWS Storage Gateway.",
-                    "D. Amazon CloudFront."
+                    "D. Amazon CloudFront.",
+                    "E. AWS Direct Connect."
                 ],
                 "solution": "C, E"
             },
@@ -4292,7 +4332,8 @@ export const Questions = [
                     "A. AWS WAF.",
                     "B. AWS Trusted Advisor.",
                     "C. AWS Direct Connect.",
-                    "D. AWS Organizations."
+                    "D. AWS Organizations.",
+                    "E. Network ACLs."
                 ],
                 "solution": "A, E"
             },
@@ -4487,7 +4528,8 @@ export const Questions = [
                     "A. AWS Concierge.",
                     "B. AWS CloudFormation.",
                     "C. Amazon Simple Storage Service (Amazon S3).",
-                    "D. Amazon EC2 Auto Scaling."
+                    "D. Amazon EC2 Auto Scaling.",
+                    "E. AWS Management Console."
                 ],
                 "solution": "B, E"
             },
@@ -4507,7 +4549,8 @@ export const Questions = [
                     "A. Summaries by Amazon Simple Notification Service (Amazon SNS).",
                     "B. Free Amazon Elasticsearch Service analytics.",
                     "C. Provided at no charge.",
-                    "D. Real-time monitoring."
+                    "D. Real-time monitoring.",
+                    "E. Adjustable retention."
                 ],
                 "solution": "D, E"
             },
@@ -4567,7 +4610,8 @@ export const Questions = [
                     "A. Fixed-term.",
                     "B. Pay-as-you-go.",
                     "C. Colocation.",
-                    "D. Planned."
+                    "D. Planned.",
+                    "E. Variable cost."
                 ],
                 "solution": "B, E"
             },
@@ -4607,7 +4651,8 @@ export const Questions = [
                     "A. Amazon Glacier.",
                     "B. Amazon RDS.",
                     "C. AWS Snowball.",
-                    "D. Amazon Redshift."
+                    "D. Amazon Redshift.",
+                    "E. Amazon EFS."
                 ],
                 "solution": "B, E"
             },
@@ -4757,7 +4802,8 @@ export const Questions = [
                     "A. Amazon CloudFront.",
                     "B. AWS Cloud9.",
                     "C. AWS CloudTrail.",
-                    "D. AWS CloudHSM."
+                    "D. AWS CloudHSM.",
+                    "E. Amazon CloudWatch."
                 ],
                 "solution": "C, E"
             },
@@ -4767,7 +4813,8 @@ export const Questions = [
                     "A. A global file system.",
                     "B. An object store.",
                     "C. A local file store.",
-                    "D. A network file system."
+                    "D. A network file system.",
+                    "E. A durable storage system."
                 ],
                 "solution": "B, E"
             },
@@ -5002,7 +5049,8 @@ export const Questions = [
                     "A. AWS Trusted Advisor.",
                     "B. AWS Online Tech Talks.",
                     "C. AWS Blog.",
-                    "D. AWS Forums."
+                    "D. AWS Forums.",
+                    "E. AWS Classroom Training."
                 ],
                 "solution": "B, E"
             },
@@ -5012,7 +5060,8 @@ export const Questions = [
                     "A. AWS Secrets Manager.",
                     "B. AWS Certificate Manager.",
                     "C. AWS Multi-Factor Authentication (AWS MFA).",
-                    "D. Security groups."
+                    "D. Security groups.",
+                    "E. Password policies."
                 ],
                 "solution": "C, E"
             },
@@ -5242,7 +5291,8 @@ export const Questions = [
                     "A. Enable AWS CloudTrail.",
                     "B. Grant least privilege access to IAM users.",
                     "C. Create one IAM user and share with many developers and users.",
-                    "D. Enable Amazon CloudFront."
+                    "D. Enable Amazon CloudFront.",
+                    "E. Activate multi-factor authentication (MFA) for privileged users."
                 ],
                 "solution": "B, E"
             },
@@ -5352,7 +5402,8 @@ export const Questions = [
                     "A. appGateway.",
                     "B. Amazon S3.",
                     "C. Amazon Elastic File System (EFS).",
-                    "D. Amazon Glacier."
+                    "D. Amazon Glacier.",
+                    "E. Amazom CloudFront."
                 ],
                 "solution": "B, E"
             },
@@ -5617,7 +5668,8 @@ export const Questions = [
                     "A. Implementing Amazon Rekognition.",
                     "B. Using AWS Shield-protected resources.",
                     "C. Blocking access with Security Groups.",
-                    "D. Using Multi-Factor Authentication (MFA)."
+                    "D. Using Multi-Factor Authentication (MFA).",
+                    "E. Enforcing password strength and expiration."
                 ],
                 "solution": "D, E"
             },
@@ -5817,7 +5869,8 @@ export const Questions = [
                     "A. Firmware upgrades of network infrastructure.",
                     "B. Patching of operating systems.",
                     "C. Patching of the underlying hypervisor.",
-                    "D. Physical security of data centers."
+                    "D. Physical security of data centers.",
+                    "E. Configuration of the security group."
                 ],
                 "solution": "B, E"
             },
@@ -5913,5 +5966,5 @@ export const Questions = [
             }
         ]
     },
-    
+
 ]

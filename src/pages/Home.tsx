@@ -16,11 +16,6 @@ const Home = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        setSelectedExam(Questions[1].name)
-        dispatch(selectExam(selectedExam));
-    }, []);
-
-    useEffect(() => {
         setQuestions(Questions.find(exam => exam.name === selectedExam)?.questions || []);
         }, [selectedExam]);
 
@@ -35,11 +30,14 @@ const Home = () => {
     };
 
     const handleExamChange = (event: SelectChangeEvent<string>) => {
-        console.log(event.target.value);
         setSelectedExam(event.target.value as string);
         dispatch(selectExam(event.target.value as string));
         resetTest();
     };
+
+    useEffect(() => {
+        setSelectedExam('Practice Exam 1')
+    }, []);
 
     useEffect(() => {
         if (currentQuestionIndex > 0) {
