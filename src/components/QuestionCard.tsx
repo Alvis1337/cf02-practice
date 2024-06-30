@@ -2,20 +2,7 @@ import {useState} from 'react';
 import {Button, Card, CardContent, Checkbox, FormControlLabel, FormGroup, Grid, Typography} from '@mui/material';
 import {toast} from 'react-toastify';
 import {useDispatch, useSelector} from "react-redux";
-import {submitAnswer} from "../store/reducers/questionReducer.ts";
-
-interface QuestionState {
-    answers: Record<string, string[]>;
-}
-
-interface ExamState {
-    selectedExam: string;
-}
-
-interface RootState {
-    question: QuestionState;
-    exam: ExamState;
-}
+import {submitAnswer} from "../store/reducers/answerReducer.ts";
 
 interface QuestionProps {
     question: string;
@@ -26,7 +13,20 @@ interface QuestionProps {
     setCurrentQuestionIndex: (index: number) => void;
 }
 
-const QuestionCard: React.FC<QuestionProps> = ({question, answers, solution, onAnswer, currentQuestionIndex, setCurrentQuestionIndex}) => {
+interface RootState {
+    answers: {
+        answers: string[][];
+    };
+}
+
+const QuestionCard: React.FC<QuestionProps> = ({
+                                                   question,
+                                                   answers,
+                                                   solution,
+                                                   onAnswer,
+                                                   currentQuestionIndex,
+                                                   setCurrentQuestionIndex
+                                               }) => {
     const [selectedAnswers, setSelectedAnswers] = useState<string[]>([]);
 
     const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -38,7 +38,7 @@ const QuestionCard: React.FC<QuestionProps> = ({question, answers, solution, onA
 
     const dispatch = useDispatch();
 
-    const userAnswers = useSelector((state: RootState) => state.question.answers);
+    const userAnswers = useSelector((state: RootState) => state.answers.answers);
 
     const handleBack = () => {
         if (currentQuestionIndex > 0) {
@@ -59,7 +59,7 @@ const QuestionCard: React.FC<QuestionProps> = ({question, answers, solution, onA
         }
 
         // Dispatch the submitAnswer action
-        dispatch(submitAnswer({questionIndex: currentQuestionIndex, answer: selectedAnswers}));
+        dispatch(submitAnswer({answerIndex: currentQuestionIndex, answer: selectedAnswers}));
     };
 
     return (

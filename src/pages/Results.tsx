@@ -1,31 +1,26 @@
-import { useSelector } from 'react-redux';
 import { List, ListItem, ListItemText, Typography } from '@mui/material';
 import { Questions } from '../assets/questions.tsx';
 
-interface QuestionState {
-    answers: Record<string, string[]>;
-}
+const Results = ({userAnswers, selectedExam}) => {
 
-interface ExamState {
-    selectedExam: string;
-}
-
-interface RootState {
-    question: QuestionState;
-    exam: ExamState;
-}
-
-const Results = () => {
-    const userAnswers = useSelector((state: RootState) => state.question.answers);
-    const selectedExam = useSelector((state: RootState) => state.exam.selectedExam);
-
-    const exam = Questions.find(exam => exam.name === selectedExam);
-    const questions = exam ? exam.questions : [];
+    const answerSheet = Questions.find(exam => exam.name === selectedExam.selectedExam);
+    const questions = answerSheet ? answerSheet.questions : [];
+    let initialGrade = 0;
+    questions.forEach((question, index) => {
+        const userAnswer = userAnswers.answers[index.toString() as keyof typeof userAnswers] || [];
+        const isCorrect = JSON.stringify(userAnswer.sort()) === JSON.stringify(question.solution.split(',').map(s => s.trim()).sort());
+        if (isCorrect) {
+            initialGrade++;
+        }
+    });
 
     return (
         <List>
+            <Typography variant="h4">Results</Typography>
+            <Typography variant="h6">{initialGrade !== 0 ? `Questions: ${initialGrade}/${questions.length}` : "Grade: 0"}</Typography>
+            <Typography variant="h6">{initialGrade !== 0 ? `Grade: ${(initialGrade / questions.length * 100).toFixed(2)}%` : "Grade: 0"}</Typography>
             {questions.map((question, index) => {
-                const userAnswer = userAnswers[index.toString() as keyof typeof userAnswers] || [];
+                const userAnswer = userAnswers.answers[index.toString() as keyof typeof userAnswers] || [];
                 const isCorrect = JSON.stringify(userAnswer.sort()) === JSON.stringify(question.solution.split(',').map(s => s.trim()).sort());
                 return (
                     <ListItem key={index}>

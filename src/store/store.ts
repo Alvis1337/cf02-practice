@@ -1,7 +1,7 @@
 import {configureStore, ThunkAction, Action, combineReducers} from '@reduxjs/toolkit';
 import { persistReducer, persistStore } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-import questionReducer from "./reducers/questionReducer.ts";
+import answerReducer from "./reducers/answerReducer.ts";
 import examReducer from "./reducers/examReducer.ts";
 
 const persistConfig = {
@@ -10,7 +10,7 @@ const persistConfig = {
 }
 
 const rootReducer = combineReducers({
-    question: questionReducer,
+    answers: answerReducer,
     exam: examReducer
 })
 

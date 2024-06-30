@@ -2,29 +2,30 @@ import {useEffect, useState} from 'react';
 import {Button, Grid, Typography, useTheme, Select, MenuItem, SelectChangeEvent} from '@mui/material';
 import {Questions} from '../assets/questions.tsx';
 import QuestionCard from '../components/QuestionCard.tsx';
-import {resetAnswers} from "../store/reducers/questionReducer.ts";
-import {useDispatch} from "react-redux";
+import {resetAnswers} from "../store/reducers/answerReducer.ts";
+import {useDispatch, useSelector} from "react-redux";
 import Results from "./Results.tsx";
 import {selectExam} from "../store/reducers/examReducer.ts";
+import {RootState} from "../store/store.ts";
 
 const Home = () => {
-    const [selectedExam, setSelectedExam] = useState(Questions[1].name);
+    const [selectedExam, setSelectedExam] = useState(Questions[0].name);
     const [questions, setQuestions] = useState(Questions.find(exam => exam.name === selectedExam)?.questions || []);
-    const [score, setScore] = useState(0);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [isTestFinished, setIsTestFinished] = useState(false);
     const dispatch = useDispatch();
+    const exam = useSelector((state: RootState) => state.exam);
+    const userAnswers = useSelector((state: RootState) => state.answers);
+
 
     useEffect(() => {
         setQuestions(Questions.find(exam => exam.name === selectedExam)?.questions || []);
-        }, [selectedExam]);
+    }, [selectedExam]);
 
     const theme = useTheme();
 
-
     const resetTest = () => {
         dispatch(resetAnswers());
-        setScore(0);
         setCurrentQuestionIndex(0);
         setIsTestFinished(false);
     };
@@ -37,6 +38,7 @@ const Home = () => {
 
     useEffect(() => {
         setSelectedExam('Practice Exam 1')
+        dispatch(selectExam('Practice Exam 1'));
     }, []);
 
     useEffect(() => {
@@ -45,10 +47,7 @@ const Home = () => {
         }
     }, [currentQuestionIndex]);
 
-    const handleAnswer = (isCorrect: boolean) => {
-        if (isCorrect) {
-            setScore(score + 1);
-        }
+    const handleAnswer = () => {
         if (currentQuestionIndex + 1 < questions.length) {
             setCurrentQuestionIndex(currentQuestionIndex + 1);
         } else {
@@ -56,19 +55,16 @@ const Home = () => {
         }
     };
 
-    const scorePercentage = (score / questions.length) * 100;
-    const hasPassed = scorePercentage >= 70;
-
     return (
         <Grid container spacing={2} sx={{p: 2}} justifyContent={'center'}>
-            <Grid item xs={12} md={4}>
-                <Typography variant={theme.breakpoints.down('sm') ? "body1" : "h6"} textAlign={'center'}>Score: {score}</Typography>
-            </Grid>
             <Grid item xs={12} md={4}>
                 <Typography
                     variant={theme.breakpoints.down('sm') ? "body1" : "h6"} textAlign={'center'}>Question: {currentQuestionIndex + 1}/{questions.length}</Typography>
             </Grid>
-            <Grid item xs={12} md={4}>
+            <Grid item xs={12} md={4} sx={{
+                display: 'flex',
+                justifyContent: 'center'
+            }}>
                 <Select value={selectedExam} onChange={handleExamChange}>
                     {Questions.map((exam, index) => (
                         <MenuItem key={index} value={exam.name}>
@@ -84,10 +80,7 @@ const Home = () => {
                 </Grid>
             ) : (
                 <Grid item xs={12} md={8}>
-                    <Typography variant={theme.breakpoints.down('sm') ? "body1" : "h5"} component="div" gutterBottom>
-                        Test finished. Your score is {scorePercentage}%. You have {hasPassed ? 'passed' : 'failed'}.
-                    </Typography>
-                    <Results />
+                    <Results userAnswers={userAnswers} selectedExam={exam} />
                     <Button variant="contained" onClick={resetTest}>
                         Reset Test
                     </Button>
